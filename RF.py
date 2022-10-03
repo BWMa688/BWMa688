@@ -41,26 +41,15 @@ for i in range(2,30,1):
 # #     score = cross_val_score(regr_RF,X_train,y_train,cv=5).mean()
 # #     ScoreAll.append([i,score])
 # # ScoreAll = np.array(ScoreAll)
-# #
-#
-
     regr_RF.fit(X_train,y_train)
     RMSE = sqrt(mean_squared_error(y_test,regr_RF.predict(X_test)))
     ScoreAll.append([i,RMSE])
-ScoreAll = np.array(ScoreAll)
 plt.figure(figsize=[20,5])
 plt.plot(ScoreAll[:,0],ScoreAll[:,1])
 plt.show()
-min_RMSE = np.where(ScoreAll==np.min(ScoreAll[:,1]))[0][0]
-print("最优参数及最低误差：",ScoreAll[min_RMSE])
 #############交叉验证###################
 kfold =KFold(n_splits=5,shuffle = True,random_state=0)
 loo = LeaveOneOut()
-regr_RF = RandomForestRegressor(n_estimators=132,random_state=0)
-scores = cross_val_score(regr_RF,X,y,cv=kfold,scoring='neg_root_mean_squared_error')
-print(scores)
-scores = scores.mean()
-print(scores)
 # ###########预测###############
 
 regr_ET = RandomForestRegressor(n_estimators=132,random_state=0)
@@ -77,9 +66,6 @@ print('Training Variance score: %.2f' % r2_score(y_train, y_train_pred_ET))
 print('Testing Variance score: %.2f' % r2_score(y_test, y_test_pred_ET))
 print_line("-")
 
-print('训练集数据')
-for i, pred in enumerate(y_train_pred_ET):
-    print("预测值：%s，实测值：%s" % (pred, y_train[i]))
 ############测试集数据################
 print('测试集数据')
 for i, pred in enumerate(y_test_pred_ET):
