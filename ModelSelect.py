@@ -37,8 +37,6 @@ print(y)
 # std = StandardScaler()
 # X = DataFrame(std.fit_transform(x))
 
-X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=0)
-
 ################################### 选择模型 ############################################
 regr_LR = linear_model.LinearRegression()
 regr_RCV = linear_model.RidgeCV(alphas=[0.01, 0.05, 0.1, 1.0, 5.0, 10.0])
