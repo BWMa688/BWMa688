@@ -2,7 +2,8 @@
 - 👀 I’m interested in Machine learning in Materials Science and data analysis, SISSO.
 - 🌱 I’m currently learning symbolic regression in perovskite ceramics. Here will be my usual use of some code, welcome to discuss with me.
 - 📫 How to reach me：mabowen.sust@qq.com 
-
+About SISSO
+======
 Another symbolic regression algorithm SISSO is related to：https://github.com/rouyang2017/SISSO
 
 <!---
