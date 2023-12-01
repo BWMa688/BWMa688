@@ -7,7 +7,7 @@ Introducation
 
 How to use
 -------------
-This project covers some common ML model training and feature engineering methods
+-This project covers some common ML model training and feature engineering methods
 -Note:
 -The folder of "An Interpretable Machine Learning Strategy for (K0.5Na0.5)NO3 ceramics" includes the dataset of this work.
 
