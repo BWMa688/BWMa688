@@ -36,7 +36,7 @@ param_grid = [
 ]
 est_gp = SymbolicRegressor(population_size=5000,
                            generations=20, stopping_criteria=60,
-                           p_hoist_mutation='p_subtree_mutation', p_point_mutation=1-,
+                           p_hoist_mutation='p_subtree_mutation', p_point_mutation=1,
                            max_samples=0.9, verbose=1, random_state=0)
 grid_search = GridSearchCV(est_gp, param_grid, cv=5,scoring='neg_mean_squared_error')
 grid_search.fit(X_train, y_train)
